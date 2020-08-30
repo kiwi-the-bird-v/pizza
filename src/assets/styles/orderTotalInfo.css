@@ -1,0 +1,26 @@
+#order-info{
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem auto;
+}
+#order-details #order-info{
+    width: 300px;
+}
+#cart #order-info{
+    width: 700px;
+}
+#order-info li{
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+#order-info button{
+    margin-right: 2rem;
+}
+#order-details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#order-details>h1{
+    padding: 5%;
+}

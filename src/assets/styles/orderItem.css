@@ -1,0 +1,19 @@
+#orders{
+    background: white;
+    min-height: calc(100vh - 120px);
+    box-sizing: border-box;
+}
+.order{
+    padding: 3% 0;
+}
+.order-content{
+    width: 700px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    word-spacing: 0.3rem;
+}
+.order-content.cost{
+    text-align: right;
+    font-size: 1.5rem;
+    padding: 2% 0;
+}

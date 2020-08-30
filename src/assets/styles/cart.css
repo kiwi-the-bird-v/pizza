@@ -1,0 +1,22 @@
+#clear-cart{
+    display: block;
+    margin: 0 2rem 0 auto;
+    padding: 0.7rem 0 0;
+    font-size: 1.2rem;
+    border-bottom: 2px dotted;
+}
+ .empty{
+     text-align: center;
+     padding: 5%;
+ }
+#cart{
+    background: white;
+    min-height: calc(100vh - 120px);
+}
+#cart .send{
+    margin: 0 auto;
+}
+#order-details{
+    background: white;
+    min-height: calc(100vh - 120px);
+}

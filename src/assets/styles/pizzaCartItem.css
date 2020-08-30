@@ -1,0 +1,28 @@
+.pizza-cart-item{
+    display: flex;
+    justify-content: center;
+}
+.pizza-cart-item-content{
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #CECECE;
+    align-items: center;
+}
+.pizza-cart-item-content > div{
+    display: flex;
+    align-items: flex-start;
+}
+.pizza-cart-item-content img{
+    width: 80px;
+}
+.pizza-cart-item-content h3{
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-left: 20px;
+}
+.pizza-cart-item-content p{
+    margin-right: 20px;
+    font-size: 1.9rem;
+}
