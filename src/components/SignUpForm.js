@@ -40,7 +40,7 @@ const SignUpForm = props => {
        copy.forEach(field => {
            data[field.name] = field.value
        });
-       fetch('http://liptonv.pythonanywhere.com/register_user', {
+       fetch('https://liptonv.pythonanywhere.com/register_user', {
            method: 'POST',
            headers: {
                'Content-Type': 'application/json;charset=utf-8'
