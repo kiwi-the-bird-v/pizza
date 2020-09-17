@@ -11,7 +11,7 @@ const Menu = () => {
     const [pizzas, setPizzas] = useState([]);
 
     const fetchPizzas = () => {
-        fetch("http://liptonv.pythonanywhere.com/get_pizza")
+        fetch("https://liptonv.pythonanywhere.com/get_pizza")
             .then(res => res.json())
             .then(data => {
                 let pizzas = data.pizzas.filter(pizza => {
