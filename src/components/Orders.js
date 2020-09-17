@@ -12,7 +12,7 @@ const Orders = props => {
     const [ordersList, setOrdersList] = useState(false);
 
     const fetchOrders = () => {
-        fetch('http://liptonv.pythonanywhere.com/get_orders_by_user_id', {
+        fetch('https://liptonv.pythonanywhere.com/get_orders_by_user_id', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
