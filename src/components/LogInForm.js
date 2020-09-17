@@ -41,7 +41,7 @@ const LogInForm = props => {
         copy.forEach(field => {
             data[field.name] = field.value
         });
-        fetch('http://liptonv.pythonanywhere.com/login_user', {
+        fetch('https://liptonv.pythonanywhere.com/login_user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
