@@ -6,7 +6,7 @@ import {
 
 
 export const fetchExchangeRateCoefficientAndDelivery = () => async dispatch => {
-    const res =  await fetch("http://liptonv.pythonanywhere.com/dollar_to_euro");
+    const res =  await fetch("https://liptonv.pythonanywhere.com/dollar_to_euro");
     const result = await res.json();
     dispatch({
         type: FETCH_EXCHANGE_RATE_COEFFICIENT_AND_DELIVERY,
@@ -50,7 +50,7 @@ export const changeInputValue = data => {
 };
 export const insertOrder = order => async dispatch => {
     try {
-        const res =  await fetch("http://liptonv.pythonanywhere.com/insert_order", {
+        const res =  await fetch("https://liptonv.pythonanywhere.com/insert_order", {
               method: 'POST',
                   headers: {
                   'Content-Type': 'application/json;charset=utf-8'
