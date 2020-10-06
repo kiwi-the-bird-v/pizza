@@ -14,7 +14,6 @@ import {reducer} from "./redux/reducer"
 import {composeWithDevTools } from 'redux-devtools-extension'
 import App from './App.js'
 
-import './assets/styles/app.css'
 
 const persistConfig = {
     key: 'root',
