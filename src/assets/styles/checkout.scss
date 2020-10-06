@@ -1,0 +1,31 @@
+@import "variables";
+
+.checkout{
+    background: $background-color-light;
+    min-height: calc(100vh - 120px);
+    &__menu{
+        display: flex;
+        font-weight: bold;
+        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+        padding: 5%;
+        justify-content: center;
+    }
+    &__form{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__link{
+        margin: 0 5%;
+        cursor: pointer;
+    }
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

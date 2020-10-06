@@ -1,0 +1,29 @@
+@import "variables";
+
+.cart{
+    background: $background-color-light;
+    min-height: calc(100vh - 120px);
+    &__clear-button{
+        display: block;
+        margin: 0 2rem 0 auto;
+        padding: 0.7rem 0 0;
+        font-size: 1.2rem;
+        border-bottom: 2px dotted;
+    }
+    &__order{
+        margin: 0 auto;
+    }
+    &__order-info{
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+
+.empty-block{
+    background: white;
+    min-height: calc(100vh - 120px);
+    &__message{
+        text-align: center;
+        padding: 5%;
+    }
+}

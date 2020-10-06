@@ -1,0 +1,58 @@
+@import "variables";
+
+.header{
+    &__body{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background: $background-color-medium;
+         height: 120px;
+     }
+    &__menu{
+         display: flex;
+         align-items: center;
+    }
+}
+
+.logo{
+    position: relative;
+    &__image{
+         width: 160px;
+         padding: 1rem 2rem;
+         max-width: unset;
+    }
+    &__extra{
+         position: absolute;
+         right: 40px;
+         bottom: 0;
+    }
+}
+
+.authorised-status{
+    &__image{
+      width: 30px;
+    }
+}
+
+nav li{
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    width: 100%;
+    font-weight: bold;
+    white-space: nowrap;
+}
+#exchange-rate{
+    height: 60px;
+    cursor: pointer;
+    max-width: unset;
+}
+#logo aside{
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+}
+#logo aside img{
+    width: 30px ;
+}

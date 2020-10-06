@@ -1,0 +1,42 @@
+@import "variables";
+
+.cart-icon{
+    text-align: center;
+    position: relative;
+    &__image-block{
+        background: $background-color-light;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        box-shadow: 0 0 20px 0 rgba(0,0,0,.4);
+        -moz-transition: all .2s ease-out;
+        -o-transition: all .2s ease-out;
+        -webkit-transition: all .2s ease-out;
+        transition: all .2s ease-out;
+    }
+    &__image{
+        height: 80%;
+        width: auto;
+        padding-top: 8px;
+    }
+    &__counter-block{
+        cursor: pointer;
+        min-width: 30px;
+        height: 30px;
+        background-color: $accent-color;
+        color: $font-color-light;
+        border-radius: 30px;
+        position: absolute;
+        right: -5px;
+        top: -5px;
+        text-align: center;
+        line-height: 30px;
+        font-family: Arial,sans-serif;
+        margin: 0px 3px;
+    }
+    &__counter{
+        border: none;
+        background-color: transparent;
+    }
+}

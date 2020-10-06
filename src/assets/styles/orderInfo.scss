@@ -1,0 +1,38 @@
+@import "variables";
+
+.order-info{
+    display: flex;
+    justify-content: flex-start;
+    margin: 2rem auto;
+    &__body{
+    }
+    &__item{
+        margin: 10px 0;
+        font-size: 1.4rem;
+    }
+}
+
+.order-details{
+    background: $background-color-light;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__title{
+        padding: 5%;
+    }
+    &__order-info{
+        width: 300px;
+    }
+}
+
+.contact-details{
+
+}
+//#order-details #order-info{
+//
+//}
+//
+//#order-info button{
+//    margin-right: 2rem;
+//}

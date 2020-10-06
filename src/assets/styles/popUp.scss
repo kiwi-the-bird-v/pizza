@@ -1,0 +1,49 @@
+@import "variables";
+
+.pop-up-bgr{
+    position: absolute;
+    background: $background-color-dark;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__close-button{
+        position: absolute;
+        top: 1rem;
+        width: auto;
+        right: 1rem;
+    }
+    &__modal-window{
+        position: relative;
+    }
+}
+
+.close-button{
+    border-radius: 4rem;
+    padding: 1%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background: $background-color-light;
+    cursor: pointer;
+}
+
+.modal-window{
+    background: $background-color-light;
+    width: 40vw;
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 10%;
+    }
+    &__image{
+        width: 30px ;
+    }
+}
