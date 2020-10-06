@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {Switch, Route, Redirect} from "react-router-dom"
 import {useDispatch} from 'react-redux';
+
 import Header from './components/Header.js'
 import Menu from './components/Menu.js'
 import OrdersWrapper from './components/OrdersWrapper.js'
@@ -9,7 +10,7 @@ import ContactDetailsForm from './components/ContactDetailsForm.js'
 import CheckoutWrapper from './components/CheckoutWrapper.js'
 import PageNotFound from './components/PageNotFound.js'
 import {fetchExchangeRateCoefficientAndDelivery} from "./redux/actions"
-import './assets/styles/app.css'
+import './assets/styles/app.scss'
 
 
 export default function () {
