@@ -3,11 +3,12 @@ import {
     FETCH_EXCHANGE_RATE_COEFFICIENT_AND_DELIVERY, CLEAR_CART, CHANGE_INPUT_VALUE, INSERT_ORDER, HAS_AUTHORISED, LOG_OUT,
     READY_FOR_NEW_ORDER
 } from "./types";
+import axios from 'axios'
 
 
 export const fetchExchangeRateCoefficientAndDelivery = () => async dispatch => {
-    const res =  await fetch("https://liptonv.pythonanywhere.com/dollar_to_euro");
-    const result = await res.json();
+    const res = await axios.get('https://liptonv.pythonanywhere.com/dollar_to_euro');
+    const result = res.data;
     dispatch({
         type: FETCH_EXCHANGE_RATE_COEFFICIENT_AND_DELIVERY,
         payload: result
@@ -50,14 +51,14 @@ export const changeInputValue = data => {
 };
 export const insertOrder = order => async dispatch => {
     try {
-        const res =  await fetch("https://liptonv.pythonanywhere.com/insert_order", {
-              method: 'POST',
-                  headers: {
-                  'Content-Type': 'application/json;charset=utf-8'
-              },
-              body: JSON.stringify(order)
+        const res = await axios.post('https://liptonv.pythonanywhere.com/insert_order',{
+            method: 'POST',
+                headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(order)
         });
-        const result = await res.json();
+        const result = res.data;
         dispatch({
             type: INSERT_ORDER,
             payload: result
