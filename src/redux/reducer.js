@@ -20,7 +20,7 @@ let initialState = {
     orderWasSent
 };
 
-export const reducer = (state=initialState, action) =>{
+export const reducer = (state = initialState, action) => {
     switch(action.type) {
 
         case CHANGE_EXCHANGE_RATE: {
@@ -38,12 +38,14 @@ export const reducer = (state=initialState, action) =>{
             return{...state, order: newOrder, exchangeRate: newExchangeRate, sign: newSign,
                              displayedDeliveryCost: displayedDeliveryCost, orderSum: newOrderSum}
         }
+
         case FETCH_EXCHANGE_RATE_COEFFICIENT_AND_DELIVERY: {
             const exchangeRateCoefficient = action.payload.coefficient;
             const deliveryCost = action.payload.deliveryCost;
             const displayedDeliveryCost = calculateValueInExchangeRate(deliveryCost, state.exchangeRate, exchangeRateCoefficient);
             return{...state, exchangeRateCoefficient: exchangeRateCoefficient, displayedDeliveryCost: displayedDeliveryCost}
         }
+
         case ADD_PIZZA_TO_CART: {
             const displayedPrice =  calculateValueInExchangeRate(action.payload.price, state.exchangeRate, state.exchangeRateCoefficient);
             const newPizza = {...action.payload, displayedPrice: displayedPrice};
@@ -53,6 +55,7 @@ export const reducer = (state=initialState, action) =>{
             let newOrder = {...state.order, pizzas: pizzasCopy};
             return{...state, order: newOrder, orderSum: newOrderSum}
         }
+
         case CHANGE_PIZZA_QUANTITY: {
             let pizzasCopy = [...state.order.pizzas];
             let newOrderSum = 0;
@@ -68,6 +71,7 @@ export const reducer = (state=initialState, action) =>{
             let changedOrder = {...state.order, pizzas: pizzasCopy};
             return{...state, order: changedOrder, orderSum: newOrderSum}
         }
+
         case REMOVE_PIZZA_FROM_CART: {
             let pizzasCopy = [...state.order.pizzas];
             let newOrderSum = 0;
@@ -80,6 +84,7 @@ export const reducer = (state=initialState, action) =>{
             let changedOrder = {...state.order, pizzas: pizzasCopy};
             return{...state, order: changedOrder, orderSum: newOrderSum}
         }
+
         case CLEAR_CART: {
             let newOrder = {...state.order};
             for(let foodType in newOrder){
@@ -87,6 +92,7 @@ export const reducer = (state=initialState, action) =>{
             }
             return{...state, order: newOrder, orderSum: 0}
         }
+
         case CHANGE_INPUT_VALUE: {
             const name = action.payload.name;
             const value = action.payload.value;
@@ -97,6 +103,7 @@ export const reducer = (state=initialState, action) =>{
             });
             return{...newState}
         }
+
         case INSERT_ORDER: {
             let newOrder = {...state.order};
             for(let foodType in newOrder){
@@ -104,13 +111,16 @@ export const reducer = (state=initialState, action) =>{
             }
             return{...state, order: newOrder, orderSum: 0, address: '', phoneNumber: '', orderWasSent: true}
         }
+
         case HAS_AUTHORISED: {
             const userId = action.payload;
             return{...state, userId: userId, isAuthorized: true}
         }
+
         case LOG_OUT: {
             return{...state, userId: '', isAuthorized: false}
         }
+
         case READY_FOR_NEW_ORDER: {
             return{...state, orderWasSent: false}
         }
