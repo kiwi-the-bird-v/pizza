@@ -26,4 +26,11 @@
         text-align: center;
         padding: 5%;
     }
+    &__link{
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        color: $accent-color;
+        font-size: 1.3rem;
+    }
 }
