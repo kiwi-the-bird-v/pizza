@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 
 const PageNotFound = () => {
     return(
-        <section id="page-not-found">
-            <h1 className="empty">Page not found</h1>
-            <Link to='/' className="back-to-menu">Back to menu</Link>
+        <section className="empty-block">
+            <h1 className="empty-block__message">Page not found</h1>
+            <Link to='/' className="empty-block__link">Back to menu</Link>
         </section>
     );
 };
