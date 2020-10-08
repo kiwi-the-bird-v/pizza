@@ -7,16 +7,16 @@
 body{
     font-family: "Arial Narrow";
     height: 100%;
-    background: #F1F3F4;
+    background: $background-color-medium;
     min-width: fit-content;
 }
 #app{
     min-height: 100%;
-    background: #F1F3F4;
+    background: $background-color-medium;
 }
 a{
     text-decoration: none;
-    color: black;
+    color: $basic-font-color;
 }
 img{
     max-width: 100%;
@@ -29,9 +29,6 @@ button{
 }
 ul{
     list-style-type: none;
-}
-.hidden {
-    display:none;
 }
 form label{
     font-size: 1.3rem;
@@ -49,15 +46,4 @@ form input{
     font-size: 1.3rem;
     border-radius: 4rem;
     outline: none;
-}
-#page-not-found{
-    background: white;
-    min-height: calc(100vh - 120px);
-}
-.back-to-menu{
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    color: #D62240;
-    font-size: 1.3rem;
 }
